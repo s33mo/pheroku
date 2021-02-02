@@ -9,7 +9,7 @@
 * Support tor network, and you can start v2ray and caddy through a custom network configuration file to configure various functions on demand
 * Supports storage of custom files, directories and account passwords are all AUUID, the client must use TLS to connect
   
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/shyperwang/proxy_heroku)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/s33mo/pheroku/)
   
 ### Server
 Click on the purple `Deploy to Heroku` above, it will jump to the heroku app creation page, fill in the name of the app, select the node, modify some parameters and AUUID as needed, and click deploy below to create the app to start deployment
