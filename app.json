@@ -9,19 +9,19 @@
         },
         "AUUID": {
             "description": "UUID serves as the path and account password for each configuration. It is recommended to modify and save it properly. UUID-generating website: https://www.uuidgenerator.net",
-            "value": "8f91b6a0-e8ee-11ea-adc1-0242ac120002"
+            "value": "b6cdbdb8-698e-49ef-b990-fe1150694f7f"
         },
         "CADDYIndexPage": {
-            "description": "After the custom CADDY is deployed, click on the display page of View, refer to: https://github.com/shypewang/proxy_hero/blob/main/etc/CADDYIndexPage.md",
-            "value": "https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/html/index.html"
+            "description": "After the custom CADDY is deployed, click on the display page of View, refer to: https://github.com/s33mo/pheroku/blob/main/etc/CADDYIndexPage.md",
+            "value": "https://raw.githubusercontent.com/s33mo/pheroku/main/html/index.html"
         },
         "CONFIGCADDY": {
             "description": "Customize the network address to read the configuration and run CADDY, please do not modify if you are not familiar with the CADDY configuration",
-            "value": "https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/Caddyfile"
+            "value": "https://raw.githubusercontent.com/s33mo/pheroku/main/etc/Caddyfile"
         },
         "CONFIGV2RAY": {
             "description": "Customize the network address to read the configuration and run V2RAY, please do not modify if you are not familiar with the V2RAY configuration",
-            "value": "https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/v2ray.json"
+            "value": "https://raw.githubusercontent.com/s33mo/pheroku/main/etc/v2ray.json"
         },
         "ParameterSSENCYPT": {
             "description": "SS encryption method, check the support agreement: https://www.v2fly.org/config/protocols/shadowsocks.html",
@@ -29,10 +29,10 @@
         },
         "StoreFiles": {
             "description": "Customize the network address to read the stored file list",
-            "value": "https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/StoreFiles"
+            "value": "https://raw.githubusercontent.com/s33mo/pheroku/main/etc/StoreFiles"
         }
     },
-    "website": "https://github.com/shyperwang/proxy_heroku",
-    "repository": "https://github.com/shyperwang/proxy_heroku",
+    "website": "https://github.com/s33mo/pheroku",
+    "repository": "https://github.com/s33mo/pheroku",
     "stack": "container"
 } 
