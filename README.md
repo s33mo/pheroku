@@ -1,41 +1,41 @@
-> 提醒： 滥用可能导致账户被BAN！！！   
+> Reminder: Abuse may lead to account being BAN! ! !
 
 
-  [原始脚本](https://github.com/mixool/kuhero),在原作者的基础上网站，增加了跳转功能，可修改跳转网页代码，起到跳转到任意网站的目的。
+  [Original script](https://github.com/mixool/kuhero), on the basis of the original author, the website has added a jump function, which can modify the jump page code to achieve the purpose of jumping to any website.
   
-  目前trojan使用的是ws，我用v2rayNG测试不过，因为v2rayNG是用的SNI，修改下程序文件试试--待解决
+  Currently trojan uses ws, I use v2rayNG to test, because v2rayNG uses SNI, try to modify the program file-to be resolved
   
-* 使用v2ray+caddy同时部署通过ws传输的vmess vless trojan shadowsocks socks等协议  
-* 支持tor网络，且可通过自定义网络配置文件启动v2ray和caddy来按需配置各种功能  
-* 支持存储自定义文件,目录及账号密码均为AUUID,客户端务必使用TLS连接  
+* Use v2ray+caddy to simultaneously deploy protocols such as vmess vless trojan shadowsocks socks transmitted via ws
+* Support tor network, and you can start v2ray and caddy through a custom network configuration file to configure various functions on demand
+* Supports storage of custom files, directories and account passwords are all AUUID, the client must use TLS to connect
   
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/shyperwang/proxy_heroku)  
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/shyperwang/proxy_heroku)
   
-### 服务端
-点击上面紫色`Deploy to Heroku`，会跳转到heroku app创建页面，填上app的名字、选择节点、按需修改部分参数和AUUID后点击下面deploy创建app即可开始部署  
-如出现错误，可以多尝试几次，待部署完成后页面底部会显示Your app was successfully deployed  
-  * 点击Manage App可在Settings下的Config Vars项**查看和重新设置参数**  
-  * 点击Open app跳转[欢迎页面](/etc/CADDYIndexPage.md)域名即为heroku分配域名，格式为`appname.herokuapp.com`，用于客户端  
-  * 默认协议密码为$UUID，WS路径为$UUID-[vmess|vless|trojan|ss|socks]格式
+### Server
+Click on the purple `Deploy to Heroku` above, it will jump to the heroku app creation page, fill in the name of the app, select the node, modify some parameters and AUUID as needed, and click deploy below to create the app to start deployment
+If an error occurs, you can try a few more times. After the deployment is complete, the bottom of the page will display Your app was successfully deployed
+  * Click Manage App to view and reset the parameters in the Config Vars item under Settings**
+  * Click Open app to jump to the [Welcome Page] (/etc/CADDYIndexPage.md) domain name to assign the domain name to heroku, the format is `appname.herokuapp.com`, which is used on the client side
+  * The default protocol password is $UUID, and the WS path is in the format of $UUID-[vmess|vless|trojan|ss|socks]
   
-### 客户端
-* **务必替换所有的appname.herokuapp.com为heroku分配的项目域名**  
-* **务必替换所有的8f91b6a0-e8ee-11ea-adc1-0242ac120002为部署时设置的AUUID**  
+### Client
+* **Be sure to replace all the project domain names assigned to heroku by appname.herokuapp.com**
+* **Be sure to replace all 8f91b6a0-e8ee-11ea-adc1-0242ac120002 with the AUUID set during deployment**
   
 <details>
 <summary>v2ray</summary>
 
 ```bash
-* 客户端下载：https://github.com/v2fly/v2ray-core/releases
-* 代理协议：vless 或 vmess
-* 地址：appname.herokuapp.com
-* 端口：443
-* 默认UUID：8f91b6a0-e8ee-11ea-adc1-0242ac120002
-* 加密：none
-* 传输协议：ws
-* 伪装类型：none
-* 路径：/8f91b6a0-e8ee-11ea-adc1-0242ac120002-vless // 默认vless使用/$uuid-vless，vmess使用/$uuid-vmess
-* 底层传输安全：tls
+* Client download: https://github.com/v2fly/v2ray-core/releases
+* Agency agreement: vless or vmess
+* Address: appname.herokuapp.com
+* Port: 443
+* Default UUID: 8f91b6a0-e8ee-11ea-adc1-0242ac120002
+* Encryption: none
+* Transmission protocol: ws
+* Camouflage type: none
+* Path:/8f91b6a0-e8ee-11ea-adc1-0242ac120002-vless // default vless use/$uuid-vless, vmess use/$uuid-vmess
+* Underlying transmission security: tls
 ```
 </details>
   
@@ -43,7 +43,7 @@
 <summary>trojan-go</summary>
 
 ```bash
-* 客户端下载: https://github.com/p4gefau1t/trojan-go/releases
+* Client download: https://github.com/p4gefau1t/trojan-go/releases
 {
     "run_type": "client",
     "local_addr": "127.0.0.1",
@@ -66,13 +66,13 @@
 <summary>shadowsocks</summary>
 
 ```bash
-* 客户端下载：https://github.com/shadowsocks/shadowsocks-windows/releases/
-* 服务器地址: appname.herokuapp.com
-* 端口: 443
-* 密码：password
-* 加密：chacha20-ietf-poly1305
-* 插件程序：v2ray-plugin_windows_amd64.exe  //需将插件https://github.com/shadowsocks/v2ray-plugin/releases下载解压后放至shadowsocks同目录
-* 插件选项: tls;host=appname.herokuapp.com;path=/8f91b6a0-e8ee-11ea-adc1-0242ac120002-ss
+* Client download: https://github.com/shadowsocks/shadowsocks-windows/releases/
+* Server address: appname.herokuapp.com
+* Port: 443
+* Password: password
+* Encryption: chacha20-ietf-poly1305
+* Plug-in program: v2ray-plugin_windows_amd64.exe //You need to download and unzip the plugin https://github.com/shadowsocks/v2ray-plugin/releases and place it in the same directory as shadowsocks
+* Plug-in options: tls;host=appname.herokuapp.com;path=/8f91b6a0-e8ee-11ea-adc1-0242ac120002-ss
 ```
 </details>
   
@@ -80,8 +80,8 @@
 <summary>cloudflare workers example</summary>
 
 ```js
-const SingleDay = 'appname.herokuapp.com'
-const DoubleDay = 'appname.herokuapp.com'
+const SingleDay ='appname.herokuapp.com'
+const DoubleDay ='appname.herokuapp.com'
 addEventListener(
     "fetch",event => {
     
@@ -110,7 +110,7 @@ addEventListener(
   addEventListener(
 "fetch",event => {
 let url=new URL(event.request.url);
-url.hostname="xx.xxxx.xx";//你的heroku域名
+url.hostname="xx.xxxx.xx";//Your heroku domain name
 let request=new Request(url,event.request);
 event. respondWith(
 fetch(request)
@@ -119,4 +119,4 @@ fetch(request)
 )
   ```
 </details>
-> [更多来自热心网友PR的使用教程](/tutorial)
+> [More tutorials from enthusiastic netizens PR](/tutorial)
