@@ -1,38 +1,38 @@
-{ 
-    " name " :  " proxy_hero " , 
-    " description " :  " v2ray websocket proxy on heroku " , 
-    " keywords " : [ " v2ray vmess vless trojan shadowsocks socks tor " ], 
-    " env " : { 
-        " AA " : { 
-            " description " : " Beginner users only need to modify the following AUUID and click the Deploy app button at the end of the page to start deployment " , 
-            " value " : " If there is an error, please check the parameter format or try several times. When using a custom parameter, be sure to fully understand its meaning first " 
-        }, 
-        " AUUID " : { 
-            " description " : " UUID serves as the path and account password for each configuration. It is recommended to modify and save it properly. The website that can generate UUID: https://www.uuidgenerator.net " , 
-            " value " :  " 8f91b6a0-e8ee-11ea-adc1-0242ac120002 " 
-        }, 
-        " CADDYIndexPage " : { 
-            " description " : " After the custom CADDY deployment is completed, click the display page of View, refer to: https://github.com/shypewang/proxy_hero/blob/main/etc/CADDYIndexPage.md " , 
-            " value " :  " https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/html/index.html " 
-        }, 
-        " CONFIGCADDY " : { 
-            " description " : " Customize the network address to read the configuration and run CADDY, please do not modify it if you are not familiar with the CADDY configuration " , 
-            " value " :  " https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/Caddyfile " 
-        }, 
-        " CONFIGV2RAY " : { 
-            " description " : " Customize the network address to read the configuration and run V2RAY, please do not modify it if you are not familiar with the V2RAY configuration " , 
-            " value " :  " https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/v2ray.json " 
-        }, 
-        " ParameterSSENCYPT " : { 
-            " description " : " SS encryption method, check the support agreement: https://www.v2fly.org/config/protocols/shadowsocks.html " , 
-            " value " :  " chacha20-ietf-poly1305 " 
-        }, 
-        " StoreFiles " : { 
-            " description " : " Customize the network address to read the stored file list " , 
-            " value " :  " https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/StoreFiles " 
-        } 
-    }, 
-    " website " :  " https://github.com/shyperwang/proxy_heroku " , 
-    " repository " :  " https://github.com/shyperwang/proxy_heroku " , 
-    " stack " :  " container " 
+{
+    "name": "proxy_hero",
+    "description": "v2ray websocket proxy on heroku",
+    "keywords": ["v2ray vmess vless trojan shadowsocks socks tor"],
+    "env": {
+        "AA": {
+            "description": "Beginner users only need to modify the following AUUID and click the Deploy app button at the end of the page to start deployment",
+            "value": "If there is an error, please check the parameter format or try several times. When using a custom parameter, be sure to fully understand its meaning first"
+        },
+        "AUUID": {
+            "description": "UUID serves as the path and account password for each configuration. It is recommended to modify and save it properly. UUID-generating website: https://www.uuidgenerator.net",
+            "value": "8f91b6a0-e8ee-11ea-adc1-0242ac120002"
+        },
+        "CADDYIndexPage": {
+            "description": "After the custom CADDY is deployed, click on the display page of View, refer to: https://github.com/shypewang/proxy_hero/blob/main/etc/CADDYIndexPage.md",
+            "value": "https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/html/index.html"
+        },
+        "CONFIGCADDY": {
+            "description": "Customize the network address to read the configuration and run CADDY, please do not modify if you are not familiar with the CADDY configuration",
+            "value": "https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/Caddyfile"
+        },
+        "CONFIGV2RAY": {
+            "description": "Customize the network address to read the configuration and run V2RAY, please do not modify if you are not familiar with the V2RAY configuration",
+            "value": "https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/v2ray.json"
+        },
+        "ParameterSSENCYPT": {
+            "description": "SS encryption method, check the support agreement: https://www.v2fly.org/config/protocols/shadowsocks.html",
+            "value": "chacha20-ietf-poly1305"
+        },
+        "StoreFiles": {
+            "description": "Customize the network address to read the stored file list",
+            "value": "https://raw.githubusercontent.com/shyperwang/proxy_heroku/main/etc/StoreFiles"
+        }
+    },
+    "website": "https://github.com/shyperwang/proxy_heroku",
+    "repository": "https://github.com/shyperwang/proxy_heroku",
+    "stack": "container"
 } 
